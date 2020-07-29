@@ -1,4 +1,5 @@
 docker -v = Versión Docker.
+docker ps = Muestra contenedores en ejecución.
 docker ps -a = Ver contenedores.
 docker container ls = Lista contenedores.
 docker container ls -q = Lista contenedores por ID.
