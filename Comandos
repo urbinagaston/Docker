@@ -1,3 +1,5 @@
 docker -v = Versión Docker.
 docker ps -a = Ver contenedores.
+docker container ls = Lista contenedores.
+docker container ls -q = Lista contenedores por ID.
 docker image rm id_container -f = Eliminar imagen.
