@@ -4,6 +4,8 @@ docker ps = Muestra contenedores en ejecución.
 docker ps -a = Ver contenedores.
 docker container ls = Lista contenedores.
 docker container ls -q = Lista contenedores por ID.
+docker pause 1e0e92b8255e
+docker unpause 1e0e92b8255e
 docker run
 docker stop
 docker container rm id_contenedor = Elimina contenedor.
@@ -11,4 +13,5 @@ docker image rm id_container -f = Eliminar imagen.
 
 
 docker container attach name_container = Ingresar a contenedor en ejecución.-
+docker top name_container = Ver procesos del contenedor.
 ctrl+p+q = Salir del contenedor sin finalizarlo.
