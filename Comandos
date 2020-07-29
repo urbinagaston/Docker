@@ -3,5 +3,7 @@ docker ps = Muestra contenedores en ejecución.
 docker ps -a = Ver contenedores.
 docker container ls = Lista contenedores.
 docker container ls -q = Lista contenedores por ID.
+docker run
+docker stop
 docker container rm id_contenedor = Elimina contenedor.
 docker image rm id_container -f = Eliminar imagen.
