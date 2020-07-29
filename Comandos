@@ -10,4 +10,5 @@ docker container rm id_contenedor = Elimina contenedor.
 docker image rm id_container -f = Eliminar imagen.
 
 
+docker container attach name_container = Ingresar a contenedor en ejecución.-
 ctrl+p+q = Salir del contenedor sin finalizarlo.
