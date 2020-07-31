@@ -15,6 +15,7 @@ docker image inspect name_image | more = Obtener información de la imagen.
 
 
 docker container attach name_container = Ingresar a contenedor en ejecución.
-docker exec -i -t container-name /bin/bash = Ingresar al bash de un contenedor.
+docker exec -it container-name /bin/bash = Ingresar al bash de un contenedor.
+docker exec -it -u root container-name /bin/bash = Ingresar al bash de un contenedor como root.
 docker top name_container = Ver procesos del contenedor.
 ctrl+p+q = Salir del contenedor sin finalizarlo.
