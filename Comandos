@@ -20,6 +20,9 @@ Salvar imágenes
 docker image save --output nombre_archivo nombre_imagen = Guardar imagen para transportar
 docker image load --input nombre_archivo
 
+Eliminar imágenes
+docker rmi $(docker images -q)
+
 
 docker container attach name_container = Ingresar a contenedor en ejecución.
 docker exec -it container-name /bin/bash = Ingresar al bash de un contenedor.
