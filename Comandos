@@ -16,6 +16,9 @@ Eliminar contenedores
 docker container rm id_contenedor = Elimina contenedor.
 docker rm $(docker ps -a -f status=exited -q) = Eliminar todos los contenedores con estado Exited
 
+Salvar imágenes
+docker image save --output nombre_archivo nombre_imagen
+
 
 docker container attach name_container = Ingresar a contenedor en ejecución.
 docker exec -it container-name /bin/bash = Ingresar al bash de un contenedor.
