@@ -1,3 +1,5 @@
+Sin Link
+
 version: '3.7'
 services:
  apache:
@@ -19,3 +21,32 @@ services:
    MYSQL_DATABASE: app
    MYSQL_USER: pepe
    MYSQL_PASSWORD: 12345
+
+
+Con Link
+
+
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: docker-mysql
+    environment:
+      MYSQL_DATABASE: database_name
+      MYSQL_USER: my_username
+      MYSQL_PASSWORD: my_password
+      MYSQL_ROOT_PASSWORD: my_password
+    ports:
+      - "3306:3306"
+    restart: always
+    
+  web:
+    image: php:7.3-apache
+    container_name: docker-php
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - mysql
