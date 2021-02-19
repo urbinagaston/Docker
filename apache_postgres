@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+      image: postgres:latest
+      ports:
+          - "5432:5432"
+      networks:
+          - overlay
+      environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 123456
+      volumes:
+          - ./sql:/sql
+          - postgres-data:/var/lib/postgresql/data
+ 
+  web:
+      image: apache7php:latest
+      ports:
+          - "80:80"
+      volumes:
+          - ../intranet:/app
+          - ./php/02_pdo_pgsql.ini:/etc/php7/conf.d/02_pdo_pgsql.ini
+          - ./http/vhost.conf:/opt/docker/etc/httpd/vhost.conf
+      links:
+        - db
+      networks:
+          - overlay
+ 
+volumes:
+  postgres-data:
+ 
+networks:
+  overlay:
