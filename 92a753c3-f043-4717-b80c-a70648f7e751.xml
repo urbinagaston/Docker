@@ -1,0 +1,20 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description></description>
+    <executionEnabled>true</executionEnabled>
+    <id>92a753c3-f043-4717-b80c-a70648f7e751</id>
+    <loglevel>INFO</loglevel>
+    <name>test_scm</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <schedules />
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <exec>hostname</exec>
+      </command>
+    </sequence>
+    <uuid>92a753c3-f043-4717-b80c-a70648f7e751</uuid>
+  </job>
+</joblist>
